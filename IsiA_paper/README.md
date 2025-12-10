@@ -5,8 +5,8 @@
 This repository contains data and code accompanying the manuscript:
 
 **Quenching of the Photosynthetic Antenna IsiA is Facilitated by its Red-Emitting States**
-*Mohamed A. A. Elrefaiy, Doran I. G. B. Raccah, Hila Toporik, Dvir Harris, Christopher J. Gisriel, Yuval Mazor, Gabriela S. Schlau-Cohen*
-[Journal/Preprint info]
+*Mohamed A. A. Elrefaiy, Dvir Harris,, Hila Toporik, Christopher J. Gisriel, Yuval Mazor, Doran I. G. B. Raccah, Gabriela S. Schlau-Cohen*
+
 
 This work presents a computational analysis of the IsiA protein complex, including:
 * Excitonic Hamiltonian calculations
@@ -154,11 +154,27 @@ All data used in this study, including the final results, are available in the `
 
 ## Citation
 
+### Manuscript (In Preparation)
+
 If you use this code or data in your research, please cite the following manuscript:
 
+**Quenching of the Photosynthetic Antenna IsiA is Facilitated by its Red-Emitting States**
+
+Mohamed A. A. Elrefaiy, Dvir Harris, Hila Toporik, Christopher J. Gisriel, Yuval Mazor, Doran I. G. B. Raccah, Gabriela S. Schlau-Cohen
+
+*Manuscript in preparation. 2025.*
+
+### GitHub Repository
+
+This repository is also citable. You can cite it using the DOI provided by Zenodo:
+
 ```
-[Journal/Preprint info]
+Elrefaiy, M. A. A., Harris, D., Toporik, H., Gisriel, C. J., Mazor, Y., Raccah, D. I. G. B., & Schlau-Cohen, G. (2025). 
+IsiA protein spectroscopy analysis: Code and data [Computer software]. GitHub. 
+https://github.com/melrefaiy2018/Papers
 ```
+
+*Note: Once the manuscript is published, the citation information will be updated with the journal details and DOI.*
 
 ## License
 
