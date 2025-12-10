@@ -1,0 +1,18 @@
+{
+  "parameters": {
+    "dielectric_cdc": 2,
+    "E_0a": 14900,
+    "E_0b": 0,
+    "N_ens": 100,
+    "chain": "A"
+  },
+  "data_description": {
+    "shift": "Site energy shifts from CDC calculations",
+    "raw": "Total site energies including vacuum contributions",
+    "contrib": "Total contribution to site energy calculations"
+  },
+  "units": {
+    "energy": "cm^-1",
+    "note": "All energies in wavenumber units"
+  }
+}

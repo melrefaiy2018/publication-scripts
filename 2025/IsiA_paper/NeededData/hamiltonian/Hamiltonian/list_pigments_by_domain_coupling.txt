@@ -1,0 +1,44 @@
+Domain: 0
+Pigments:
+  - Isia_A_CLA_501
+
+Domain: 1
+Pigments:
+  - Isia_A_CLA_504
+  - Isia_A_CLA_502
+
+Domain: 2
+Pigments:
+  - Isia_A_CLA_503
+
+Domain: 3
+Pigments:
+  - Isia_A_CLA_508
+  - Isia_A_CLA_509
+  - Isia_A_CLA_510
+  - Isia_A_CLA_505
+  - Isia_A_CLA_507
+  - Isia_A_CLA_511
+
+Domain: 4
+Pigments:
+  - Isia_A_CLA_506
+
+Domain: 5
+Pigments:
+  - Isia_A_CLA_513
+  - Isia_A_CLA_516
+  - Isia_A_CLA_512
+
+Domain: 6
+Pigments:
+  - Isia_A_CLA_517
+
+Domain: 7
+Pigments:
+  - Isia_A_CLA_518
+
+Domain: 8
+Pigments:
+  - Isia_A_CLA_519
+
