@@ -1,0 +1,4 @@
+residue_full,residue_type,chain_name,residue_number,pka_value,is_extreme,pH_effective,tolerance,distance_from_pH_eff
+GLU-A0061_,GLU,A,61,5.988,False,6.7,1.0,0.7119999999999997
+HIS+A0193_,HIS,A,193,7.294,False,6.7,1.0,0.5939999999999994
+HIS+A0297_,HIS,A,297,6.919,False,6.7,1.0,0.21899999999999942

@@ -1,0 +1,5 @@
+Best Model: Run_FL16_ISC10_coupling_100_CT_energy_14580_model_2
+Ratio: Monomer_40pct_CT_60pct_RP1_0pct_CTRP1_0pct
+Time File: time_resolved_Monomer_40pct_CT_60pct_RP1_0pct_CTRP1_0pct_start_time_0.0.npy
+Wavelength File: wavelength_resolved_Monomer_40pct_CT_60pct_RP1_0pct_CTRP1_0pct_start_time_0.0.npy
+Score: 0.367425

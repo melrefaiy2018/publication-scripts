@@ -1,0 +1,4 @@
+residue_full,residue_number,pka_value,protonation_state_at_pH7
+ARG+A0113_,113,12.659,Protonated
+ARG+A0127_,127,12.194,Protonated
+ARG+A0332_,332,12.66,Protonated

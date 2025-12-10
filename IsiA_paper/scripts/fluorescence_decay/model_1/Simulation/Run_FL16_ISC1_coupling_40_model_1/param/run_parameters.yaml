@@ -1,0 +1,23 @@
+configuration_used: model_1
+run_specific_parameters:
+  seed: 5
+  time_fl_us: 16
+  time_isc_us: 1
+  coupling_value_cm-1: 40
+fixed_parameters:
+  pdb_file: extended_most_occ_pH7_CT.pdb
+  e0_a_cm-1: 14900
+  e0_b_cm-1: 0
+  N_ens: 100
+  temp_K: 300
+  dielectric_tresp: 1
+  dielectric_dipole: 1.5
+  dielectric_cdc: 2
+calculation_settings:
+  N_t: 800000
+  dt_fs: 10
+  N_save: 1000
+used_parameter_set:
+  TIME_FL: 16
+  TIME_ISC: 1
+  COUPLING_value: 40

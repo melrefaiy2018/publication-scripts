@@ -1,0 +1,7 @@
+residue_type,total,matches,pct_agree
+ARG,3,3,100.0
+ASP,11,11,100.0
+GLU,8,7,87.5
+HIS,7,6,85.71428571428571
+LYS,7,7,100.0
+TYR,7,0,0.0

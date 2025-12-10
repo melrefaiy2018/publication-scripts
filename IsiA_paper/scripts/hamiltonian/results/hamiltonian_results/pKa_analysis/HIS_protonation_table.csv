@@ -1,0 +1,8 @@
+residue_full,residue_number,pka_value,protonation_state_at_pH7
+HIS+A0069_,69,2.384,Deprotonated
+HIS+A0096_,96,0.268,Deprotonated
+HIS+A0129_,129,1.94,Deprotonated
+HIS+A0144_,144,3.919,Deprotonated
+HIS+A0193_,193,7.294,Protonated
+HIS+A0297_,297,6.919,Deprotonated
+HIS+A0318_,318,0.308,Deprotonated
