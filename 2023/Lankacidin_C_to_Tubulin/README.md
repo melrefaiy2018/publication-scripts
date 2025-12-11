@@ -2,6 +2,12 @@
 
 This folder contains the scripts and parameters used to prepare a receptor–GDP–ligand complex, run GROMACS simulations on a Slurm cluster, and compute binding free energies with g_mmpbsa.
 
+## Publications
+These workflows were used for the tubulin–lankacidin studies:
+- Ayoub, A. T., Elrefaiy, M. A., et al. (2022) “Bioinspired computational design of lankacidin derivatives for improvement in antitumor activity.” Future Medicinal Chemistry 14, 1349–1360. DOI:10.4155/fmc-2022-0134.
+- Ayoub, A. T., Elrefaiy, M. A., & Arakawa, K. (2019) “Computational prediction of the mode of binding of antitumor lankacidin C to tubulin.” ACS Omega 4(2), 4461–4471. DOI:10.1021/acsomega.8b03470.
+
+
 ## Layout
 - `bash_scripts/` – all workflow scripts (prep, solvation, minimization, equilibration, production, continuation, concatenation, analysis, MMPBSA, Slurm job templates).
 - `gromacs_mdp/` – GROMACS parameter files (`em.mdp`, `ions.mdp`, `nvt.mdp`, `npt.mdp`, `md.mdp`, `pbsa.mdp`).
@@ -60,8 +66,3 @@ export BFE_DIR=$BASE_DIR/binding_free_energy
 - Slurm job templates (`gpujob.sh`, `job.sh`, headers in MMPBSA scripts) contain email/account fields—update them for your cluster.
 - The scripts still default to historic module names; change the `module load` lines to your available GROMACS/AmberTools/OpenBabel/ACPYPE modules or paths.
 - Run all scripts from this folder so relative paths resolve correctly after the re-organization.
-
-## Provenance
-These workflows were used for the tubulin–lankacidin studies:
-- Ayoub, A. T., Elrefaiy, M. A., et al. (2022) “Bioinspired computational design of lankacidin derivatives for improvement in antitumor activity.” Future Medicinal Chemistry 14, 1349–1360. DOI:10.4155/fmc-2022-0134.
-- Ayoub, A. T., Elrefaiy, M. A., & Arakawa, K. (2019) “Computational prediction of the mode of binding of antitumor lankacidin C to tubulin.” ACS Omega 4(2), 4461–4471. DOI:10.1021/acsomega.8b03470.
