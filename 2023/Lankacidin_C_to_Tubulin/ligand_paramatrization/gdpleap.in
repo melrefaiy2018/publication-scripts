@@ -1,0 +1,9 @@
+source leaprc.ff99SBildn
+loadamberparams frcmod.phos
+loadamberprep gdp.prep
+gdp = loadpdb gdp.pdb
+check gdp
+check gdp
+saveoff gdp gdp.lib
+saveamberparm gdp gdp_AC.prmtop gdp_AC.inpcrd
+quit
