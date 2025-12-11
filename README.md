@@ -23,3 +23,7 @@ This repository does not include large datasets or external resources. It focuse
 ## Goal
 
 The main goal of this repository is to improve clarity, reproducibility, and long term organization of my research code. It provides a single place where all computational work for each paper can be maintained and referenced as the research evolves.
+
+## License & citation
+- License: MIT (see `LICENSE`).
+- If you reuse or extend the supplied simulation/analysis scripts, please cite the relevant paper(s) where they were used. check each project folder's README for citation details.

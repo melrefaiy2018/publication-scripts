@@ -66,3 +66,7 @@ export BFE_DIR=$BASE_DIR/binding_free_energy
 - Slurm job templates (`gpujob.sh`, `job.sh`, headers in MMPBSA scripts) contain email/account fields—update them for your cluster.
 - The scripts still default to historic module names; change the `module load` lines to your available GROMACS/AmberTools/OpenBabel/ACPYPE modules or paths.
 - Run all scripts from this folder so relative paths resolve correctly after the re-organization.
+
+## License & citation
+- License: MIT (see repository root `LICENSE`).
+- If you use or adapt these scripts, please cite the tubulin–lankacidin studies where they were applied: Ayoub, A. T., Elrefaiy, M. A., et al. Future Med. Chem. 2022, 14, 1349–1360 (DOI:10.4155/fmc-2022-0134) and Ayoub, A. T., Elrefaiy, M. A., & Arakawa, K. ACS Omega 2019, 4(2), 4461–4471 (DOI:10.1021/acsomega.8b03470).
