@@ -1,9 +1,12 @@
-# prepare complex and toppology
+# prepare complex and topology
 
-neededFiles="/home/zc002u1/data/tubulin/neededFiles"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+BASE_DIR="${BASE_DIR:-$(cd "$SCRIPT_DIR/.." && pwd)}"
+neededFiles="${NEEDED_FILES:-$BASE_DIR}"
+param_dir="${PARAM_DIR:-$neededFiles/ligand_paramatrization}"
 
 cp gdp/gdp.acpype/gdp_GMX.gro .
-cp $neededFiles/gdp_GMX.itp .
+cp "$param_dir/gdp_GMX.itp" .
 cp LIG/LIG.acpype/LIG_GMX.gro .
 cp LIG/LIG.acpype/LIG_GMX.itp .
 

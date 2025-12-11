@@ -14,13 +14,16 @@ name=`basename $1 .xtc`
 st=`echo $1 | cut -d"_" -f3 | cut -d"." -f1`
 et=`c "$st+$ns"`
 
-neededFiles="/home/zc002u1/data/tubulin/neededFiles"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+BASE_DIR="${BASE_DIR:-$(cd "$SCRIPT_DIR/.." && pwd)}"
+neededFiles="${NEEDED_FILES:-$BASE_DIR}"
+mdp_dir="${MDP_DIR:-$neededFiles/gromacs_mdp}"
 
-cat $neededFiles/md.mdp | sed s/XXXXXXX/$steps/g | sed s/YYYYY/$ps/ | sed s/ZZ/$ns/ > md.mdp
+cat "$mdp_dir/md.mdp" | sed s/XXXXXXX/$steps/g | sed s/YYYYY/$ps/ | sed s/ZZ/$ns/ > md.mdp
 
 gmx grompp -f md.mdp -c $name.gro -t $name.cpt -p topol.top -n index.ndx -o md_"$st"_"$et".tpr
 
-cat $neededFiles/gpujob.sh | sed 's/XNAME/md/' > md.sh
+cat "$SCRIPT_DIR/gpujob.sh" | sed 's/XNAME/md/' > md.sh
 echo "gmx mdrun -pin on -ntmpi 2 -ntomp 6 -nb gpu -pme cpu -bonded cpu -v -deffnm md_"$st"_"$et"" >> md.sh
 
 sbatch md.sh

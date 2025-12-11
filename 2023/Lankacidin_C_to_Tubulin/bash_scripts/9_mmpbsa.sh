@@ -9,8 +9,10 @@ name=`basename $1 .xtc`
 module load GROMACS/2019-fosscuda-2018b 
 
 
-neededFiles="/home/zc002u1/data/tubulin/neededFiles"
-pbsa="/home/zc002u1/data/tubulin/g_mmpbsa/bin"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+BASE_DIR="${BASE_DIR:-$(cd "$SCRIPT_DIR/.." && pwd)}"
+neededFiles="${NEEDED_FILES:-$BASE_DIR}"
+mdp_dir="${MDP_DIR:-$neededFiles/gromacs_mdp}"
 
 echo "1 | 14
 q" | gmx make_ndx -f em.gro -n index.ndx -o index2.ndx
@@ -21,6 +23,5 @@ cd mmpbsa
 echo "1
 0" | gmx trjconv -s ../em.tpr -f ../$1 -o ../"$name"_center.xtc -center -pbc mol -ur compact
 
-cp $neededFiles/pbsa.mdp .
-cp $neededFiles/mmpbsajob.sh .
-
+cp "$mdp_dir/pbsa.mdp" .
+cp "$SCRIPT_DIR/mmpbsajob.sh" .

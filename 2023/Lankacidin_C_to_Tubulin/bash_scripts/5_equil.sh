@@ -1,7 +1,9 @@
 module load GROMACS/2019-fosscuda-2018b 
 
-
-neededFiles="/home/zc002u1/data/tubulin/neededFiles"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+BASE_DIR="${BASE_DIR:-$(cd "$SCRIPT_DIR/.." && pwd)}"
+neededFiles="${NEEDED_FILES:-$BASE_DIR}"
+mdp_dir="${MDP_DIR:-$neededFiles/gromacs_mdp}"
 
 #restraining ligands
 
@@ -29,12 +31,12 @@ echo "1 | 13 | 14
 q" | gmx make_ndx -f em.gro -o index.ndx
 
 # NVT 
-cp $neededFiles/nvt.mdp .
-cp $neededFiles/npt.mdp .
+cp "$mdp_dir/nvt.mdp" .
+cp "$mdp_dir/npt.mdp" .
 
 gmx grompp -f nvt.mdp -c em.gro -r em.gro -p topol.top -n index.ndx -o nvt.tpr
 
-cat $neededFiles/gpujob.sh | sed 's/XNAME/equil/' > equil.sh
+cat "$SCRIPT_DIR/gpujob.sh" | sed 's/XNAME/equil/' > equil.sh
 echo "gmx mdrun -pin on -ntomp 6 -v -deffnm nvt" >> equil.sh
 
 echo "gmx grompp -f npt.mdp -c nvt.gro -t nvt.cpt -r nvt.gro -p topol.top -n index.ndx -o npt.tpr" >> equil.sh
@@ -42,5 +44,4 @@ echo "gmx grompp -f npt.mdp -c nvt.gro -t nvt.cpt -r nvt.gro -p topol.top -n ind
 echo "gmx mdrun -pin on -ntomp 6 -v -deffnm npt" >> equil.sh
 
 sbatch equil.sh
-
 
