@@ -18,13 +18,13 @@ This folder contains the scripts and parameters used to prepare a receptor–GDP
 
 Edit the hard-coded paths in the scripts (e.g., `neededFiles`, `ACPYPE`, `pbsa`) to match this folder. A quick option:
 ```bash
-export BASE_DIR=/Users/mohamed/Documents/Research/Projects/GitHub_repo/Papers/2023/neededFiles
+export BASE_DIR=""$(pwd)"
 export PARAM_DIR=$BASE_DIR/ligand_paramatrization
 export MDP_DIR=$BASE_DIR/gromacs_mdp
 export BFE_DIR=$BASE_DIR/binding_free_energy
 ```
 
-## Workflow (run from `2023/neededFiles`)
+## Workflow (run from `2023/Lankacidin_C_to_Tubulin`)
 1) **Ligand & GDP parameters** – `bash_scripts/1_ligandPreparation.sh complex.pdb`  
    Splits the input PDB into receptor (`rec.pdb`), GDP (`gdp.pdb`), and ligand (`LIG.pdb`), then runs Antechamber/ACPYPE using files in `ligand_paramatrization/`.
 
