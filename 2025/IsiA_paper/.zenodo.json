@@ -1,0 +1,54 @@
+{
+  "title": "Data and Code for: Quenching of the Photosynthetic Antenna IsiA is Facilitated by its Red-Emitting States",
+  "description": "This repository contains computational data and analysis scripts for studying the photosynthetic antenna protein IsiA. The work includes: (1) Excitonic Hamiltonian calculations using site energies derived from MCCE calculations and transition dipole couplings; (2) Absorption and fluorescence spectra predictions based on the calculated Hamiltonians; (3) Time-resolved fluorescence decay simulations using multiple kinetic models to understand energy transfer and quenching dynamics. The computational framework combines quantum mechanical calculations with molecular dynamics to provide insights into how red-emitting states facilitate quenching in the IsiA protein complex. All scripts are written in Python and utilize the pymembrane library for membrane protein simulations. The repository includes complete input data, analysis scripts, and example outputs to ensure reproducibility of published results.",
+  "upload_type": "dataset",
+  "access_right": "open",
+  "license": "MIT",
+  "creators": [
+    {
+      "name": "Elrefaiy, Mohamed A. A.",
+      "affiliation": "Massachusetts Institute of Technology"
+    },
+    {
+      "name": "Harris, Dvir"
+    },
+    {
+      "name": "Toporik, Hila"
+    },
+    {
+      "name": "Gisriel, Christopher J."
+    },
+    {
+      "name": "Mazor, Yuval"
+    },
+    {
+      "name": "Raccah, Doran I. G. B."
+    },
+    {
+      "name": "Schlau-Cohen, Gabriela S.",
+      "affiliation": "Massachusetts Institute of Technology"
+    }
+  ],
+  "keywords": [
+    "photosynthesis",
+    "protein spectroscopy",
+    "computational chemistry",
+    "IsiA protein",
+    "excitonic Hamiltonian",
+    "fluorescence decay",
+    "time-resolved spectroscopy",
+    "quantum dynamics",
+    "energy transfer",
+    "photosynthetic antenna",
+    "cyanobacteria"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.XXXXXX",
+      "relation": "isSupplementTo",
+      "scheme": "doi",
+      "resource_type": "publication-article"
+    }
+  ],
+  "notes": "This dataset accompanies a manuscript currently in preparation. The DOI for the published manuscript will be updated once available. All code was developed and tested on Python 3.8+. Computational requirements vary by model, with typical simulations requiring 4-16 CPU cores and 8-32 GB RAM."
+}

@@ -1,6 +1,6 @@
 """
 Author: Mohamed A. A. Elrefaiy
-Data: November 2025
+Date: November 2024
 ===========================================================================
 IsiA Monomer Hamiltonian and Spectra Calculation:
 Calculates excitonic Hamiltonian, absorption, and fluorescence spectra
@@ -37,14 +37,14 @@ import logging
 from datetime import datetime
 
 # ============================================================================
-# PATH SETUP - UPDATED FOR ZENODO
+# PATH SETUP
 # ============================================================================
 
 # Get the script's location and navigate to project root
 script_file = Path(__file__).resolve()
 hamiltonian_dir = script_file.parent           # scripts/hamiltonian/
 scripts_dir = hamiltonian_dir.parent           # scripts/
-project_root = scripts_dir.parent              # IsiA_data_and_code/
+project_root = scripts_dir.parent              # IsiA_paper/
 
 # Define input paths
 pdb_file = project_root / 'NeededData' / 'structure' / 'extended_most_occ_pH7.pdb'

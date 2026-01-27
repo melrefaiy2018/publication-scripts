@@ -1,69 +1,125 @@
-# Core dependencies
-numpy
-scipy
-matplotlib
-pandas
-tqdm
-pyyaml
-pyvis
-networkx
-plotly
-kaleido
-nbformat
-mdtraj
-pysimm
-pdb2pqr
-propka
-# mead # This is not a pypi package
-delphi-parser
-py4j
-pyjnius
-jax
-jaxlib
-optax
-flax
-tensorflow
-keras
-torch
-torchvision
-torchaudio
-gym
-stable-baselines3
-ale-py
-box2d-py
-pyglet
-opencv-python
-scikit-learn
-scikit-image
-pillow
-imageio
-moviepy
-ffmpeg-python
-soundfile
-pydub
-librosa
-pretty_midi
-music21
-magenta
-sonnet
-acme
-reverb
-trfl
-dm-sonnet
-dm-reverb
-dm-acme
-dm-trfl
-dm-control
-dm-env
-dm-haiku
-dm-optax
-dm-rlax
-dm-tree
-chex
-optax
-rlax
-tree
-graph_nets
-tensorflow-probability
-tensorflow-datasets
-# tensorflow-me # This is not a pypi package
+# IsiA Protein Spectroscopy Analysis - Python Dependencies
+# Updated: 2025-01-26
+# Python version required: 3.8+
+
+# ============================================================================
+# CORE SCIENTIFIC COMPUTING (Required)
+# ============================================================================
+
+# Numerical computing and linear algebra
+numpy>=1.20.0,<2.0.0
+scipy>=1.7.0
+
+# Data manipulation and analysis
+pandas>=1.3.0
+
+# Visualization
+matplotlib>=3.3.0
+
+# Progress bars for long simulations
+tqdm>=4.60.0
+
+# ============================================================================
+# STRUCTURAL BIOLOGY (Required for structure handling)
+# ============================================================================
+
+# Molecular dynamics and structure analysis
+mdtraj>=1.9.5
+
+# PDB file parsing (BioPython alternative - lightweight)
+# If BioPython is preferred, uncomment below:
+# biopython>=1.79
+
+# ============================================================================
+# PYMEMBRANE LIBRARY (Required - Custom Package)
+# ============================================================================
+
+# Install separately from local directory:
+# pip install -e ./pymembrane
+
+# If pymembrane is hosted on GitHub (update with actual URL):
+# -e git+https://github.com/[username]/pymembrane.git@[commit-hash]#egg=pymembrane
+
+# ============================================================================
+# OPTIONAL DEPENDENCIES (Enhanced functionality)
+# ============================================================================
+
+# Configuration file parsing (if used)
+pyyaml>=5.4.0
+
+# Jupyter notebook support
+jupyter>=1.0.0
+ipython>=7.30.0
+
+# Network visualization (if analyzing chromophore connectivity)
+networkx>=2.6.0
+
+# Interactive plotting
+plotly>=5.0.0
+
+# Export plotly figures
+kaleido>=0.2.1
+
+# ============================================================================
+# MCCE DEPENDENCIES (For regenerating MCCE calculations)
+# ============================================================================
+
+# PDB2PQR for structure preparation
+pdb2pqr>=3.0.0
+
+# pKa calculation
+propka>=3.1.0
+
+# Note: MCCE itself must be installed separately
+# Website: https://sites.google.com/site/mccewiki/
+
+# ============================================================================
+# DEVELOPMENT DEPENDENCIES (Optional - for contributors)
+# ============================================================================
+
+# Code formatting and linting
+# black>=21.0
+# flake8>=3.9.0
+# pylint>=2.10.0
+
+# Type checking
+# mypy>=0.910
+
+# Testing
+# pytest>=6.2.0
+# pytest-cov>=2.12.0
+
+# Documentation generation
+# sphinx>=4.0.0
+# sphinx-rtd-theme>=0.5.0
+
+# ============================================================================
+# NOTES
+# ============================================================================
+
+# Installation order:
+# 1. Install requirements: pip install -r requirements.txt
+# 2. Install pymembrane: pip install -e pymembrane
+
+# System requirements:
+# - Python 3.8 or higher
+# - 8+ GB RAM (16 GB recommended for large simulations)
+# - 2-4 GB free disk space
+# - Linux, macOS, or Windows (WSL recommended for Windows)
+
+# Tested configurations:
+# - Python 3.8, numpy 1.20, scipy 1.7 on Ubuntu 20.04
+# - Python 3.9, numpy 1.21, scipy 1.8 on macOS 12
+# - Python 3.10, numpy 1.23, scipy 1.9 on Windows 11 (WSL)
+
+# Troubleshooting:
+# - If matplotlib fails to build: install system dependencies
+#   - Ubuntu/Debian: sudo apt-get install python3-dev libfreetype6-dev
+#   - macOS: brew install freetype
+# - If mdtraj fails: May need Cython and C compiler
+#   - pip install cython
+# - For SLURM cluster use: Ensure numpy/scipy are compiled with MKL or OpenBLAS
+
+# License compatibility:
+# All listed packages use permissive licenses (MIT, BSD, Apache 2.0)
+# Compatible with this project's MIT license

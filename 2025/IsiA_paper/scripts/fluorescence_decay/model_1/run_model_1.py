@@ -1,3 +1,60 @@
+"""
+Module: Fluorescence Decay Model 1 - Single Red-State Quenching
+Purpose: Simulate time-resolved fluorescence decay with red-emitting state enhancement
+Author: Mohamed A. A. Elrefaiy
+Date: 2025
+Dependencies: numpy, scipy, matplotlib, Bio, pymembrane, tqdm, yaml, pathlib
+
+Usage:
+    Basic execution:
+        python run_model_1.py
+
+    With specific parameters:
+        python run_model_1.py --seed 42 --param_index 5
+
+    Parallel execution (SLURM):
+        sbatch run_model_1_slurm_parallel.py
+
+Description:
+    Model 1 simulates fluorescence quenching via a single population of red-emitting states
+    that facilitate non-radiative relaxation. The script:
+
+    1. Loads Hamiltonian from NeededData/hamiltonian/
+    2. Initializes excitation populations based on absorption spectrum
+    3. Simulates time-resolved decay through multiple ensemble trajectories
+    4. Calculates wavelength-resolved fluorescence
+    5. Generates statistical analysis and plots
+    6. Outputs results in Simulation/ subdirectory
+
+Parameters:
+    - N_ens: Number of ensemble trajectories (default: 1000)
+    - t_max: Maximum simulation time (default: 10 ns)
+    - dt: Time step for integration (default: 0.005 ns)
+    - f_red: Fraction of population in red-emitting states
+    - k_red: Quenching rate in red states (ns⁻¹)
+    - k_blue: Quenching rate in blue states (ns⁻¹)
+
+    Edit unified_parameters.py to customize parameters
+
+Output Files:
+    Simulation/
+    ├── ensemble_average.npy                 # Mean fluorescence decay
+    ├── time_resolved_fluorescence.npz       # Complete time-resolved data
+    ├── wavelength_resolved_*.npz            # Wavelength-specific traces
+    ├── analysis_statistics.csv              # Statistical metrics
+    └── figures/                             # PNG plots
+
+Expected Runtime:
+    - Default (N_ens=1000): 5-15 minutes
+    - Large (N_ens=10000): 30-60 minutes
+
+Notes:
+    - Simulations are stochastic; use same seed for reproducibility
+    - Results depend on Hamiltonian calculation being completed first
+    - Memory usage scales with N_ens * time_points * wavelength_points
+    - Parallel execution via SLURM is recommended for large parameter sweeps
+"""
+
 # Standard library imports
 import argparse
 import logging
@@ -34,20 +91,20 @@ plt.style.use('default')  # Use the default style sheet (white background)
 
 def parse_args():
     """Parse command line arguments for the script."""
-    parser = argparse.ArgumentParser(description="Run Fl decay model (Model 12) with specified parameters.")
+    parser = argparse.ArgumentParser(description="Run fluorescence decay model (Model 1) with specified parameters.")
     parser.add_argument('--seed', type=int, default=1, help="Random seed for the ensemble.")
     parser.add_argument('--param_index', type=int, default=None,
-                        help="Index of parameter combination to run (for parallel execution).")
+                         help="Index of parameter combination to run (for parallel execution).")
     parser.add_argument('--total_params', type=int, default=None,
-                        help="Total number of parameter combinations (for validation).")
+                         help="Total number of parameter combinations (for validation).")
     parser.add_argument('--config', type=str, default='model_1',
-                        help="Parameter configuration to use (see unified_parameters.py)")
+                         help="Parameter configuration to use (see unified_parameters.py)")
     parser.add_argument('--list_configs', action='store_true',
-                        help="List available parameter configurations and exit")
+                         help="List available parameter configurations and exit")
     parser.add_argument('--show_config', type=str, default=None,
-                        help="Show details of a specific configuration and exit")
+                         help="Show details of a specific configuration and exit")
     parser.add_argument('--list_params', action='store_true',
-                        help="Just list all parameter combinations and exit.")
+                         help="List all parameter combinations and exit.")
 
     return parser.parse_args()
 

@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use this software or data, please cite both the manuscript and this repository."
+title: "Data and Code for: Quenching of the Photosynthetic Antenna IsiA is Facilitated by its Red-Emitting States"
+version: 1.0.0
+date-released: 2025-01-26
+authors:
+  - family-names: "Elrefaiy"
+    given-names: "Mohamed A. A."
+    affiliation: "Massachusetts Institute of Technology"
+  - family-names: "Harris"
+    given-names: "Dvir"
+  - family-names: "Toporik"
+    given-names: "Hila"
+  - family-names: "Gisriel"
+    given-names: "Christopher J."
+  - family-names: "Mazor"
+    given-names: "Yuval"
+  - family-names: "Raccah"
+    given-names: "Doran I. G. B."
+  - family-names: "Schlau-Cohen"
+    given-names: "Gabriela S."
+    affiliation: "Massachusetts Institute of Technology"
+repository-code: "https://github.com/melrefaiy2018/IsiA_paper"
+url: "https://github.com/melrefaiy2018/IsiA_paper"
+abstract: "This repository contains computational data and analysis scripts for studying the photosynthetic antenna protein IsiA. It includes excitonic Hamiltonian calculations, absorption and fluorescence spectra predictions, and time-resolved fluorescence decay simulations. The code and data accompany the manuscript investigating how red-emitting states facilitate quenching in the IsiA protein complex."
+keywords:
+  - photosynthesis
+  - protein spectroscopy
+  - computational chemistry
+  - IsiA protein
+  - excitonic Hamiltonian
+  - fluorescence decay
+  - time-resolved spectroscopy
+  - quantum dynamics
+license: MIT
+type: dataset
