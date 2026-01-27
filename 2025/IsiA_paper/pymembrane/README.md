@@ -10,27 +10,13 @@ The pymembrane library provides Python utilities for:
 - Chromophore positioning and analysis
 - Spectral predictions from quantum chemistry
 
-## Current Status
-
-⚠️ **Note:** This directory currently contains placeholder files only. To complete the installation, the full pymembrane source code needs to be added.
-
 ## Installation
 
-### Option 1: From Local Directory (Recommended for this project)
+### From Local Directory (Recommended for this project)
 
 ```bash
 # From repository root
-pip install -e pymembrane
-```
-
-### Option 2: From Remote Repository
-
-```bash
-# If pymembrane is hosted on GitHub (URL to be filled in):
-pip install -e git+https://github.com/[username]/pymembrane.git#egg=pymembrane
-
-# Or with specific commit hash:
-pip install -e git+https://github.com/[username]/pymembrane.git@[commit-hash]#egg=pymembrane
+pip install -e pymembrane/.
 ```
 
 ## Expected Structure
@@ -84,23 +70,6 @@ pymembrane/
     └── [example scripts]
 ```
 
-## Obtaining pymembrane
-
-### From Developers
-
-Contact the pymembrane developers for the latest source code:
-- [Developer name/email - to be filled]
-- [GitHub profile - to be filled]
-- [Lab website - to be filled]
-
-### From Repository
-
-If pymembrane is public:
-```bash
-git clone https://github.com/[username]/pymembrane.git pymembrane_source
-cp -r pymembrane_source/pymembrane pymembrane/
-```
-
 ## Verification After Installation
 
 Once pymembrane source is added, verify installation:
@@ -141,9 +110,6 @@ pymembrane requires:
 
 The pymembrane library should use a license compatible with MIT:
 - MIT License (preferred for compatibility)
-- BSD License (acceptable)
-- Apache 2.0 (acceptable)
-- GPL (not compatible - would restrict this project)
 
 ## Attribution
 
@@ -179,15 +145,6 @@ The required module is missing or has different structure.
 2. Verify all required modules are present
 3. Review pymembrane package structure
 
-## TODO - Zenodo Release
-
-Before final release, ensure:
-- [ ] pymembrane source code is added to this directory
-- [ ] All dependencies are specified in requirements.txt
-- [ ] License is compatible (MIT or BSD preferred)
-- [ ] Attribution and citation are correct
-- [ ] Installation can be verified successfully
-
 ## Related Documentation
 
 - **Main README:** [../README.md](../README.md)
@@ -197,6 +154,4 @@ Before final release, ensure:
 
 ---
 
-*Last updated: January 26, 2025*
-
-*Status: Awaiting pymembrane source code*
+*Last updated: January 26, 2026*

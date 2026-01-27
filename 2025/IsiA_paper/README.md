@@ -80,9 +80,6 @@ IsiA_paper/
 
 ### Key Directories and Files
 
-- **`.claude/`**: Claude-specific configurations
-  - `settings.local.json`: Local Claude settings
-
 - **`NeededData/`**: All input data and calculated outputs
   - `DATA_DICTIONARY.md`: Complete parameter definitions and units
   - `Experimental_Data/`: Reference spectroscopy measurements
