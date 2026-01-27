@@ -53,71 +53,56 @@ python cdc_IsiA_monomer_average_pH7.py
 ```
 IsiA_paper/
 ├── README.md                  # This file
-├── QUICKSTART.md              # 5-minute setup guide
-├── CITATION.cff               # Citation metadata
+├── QUICKSTART.md              # setup guide
 ├── CHANGELOG.md               # Version history
 ├── AUTHORS.md                 # Contributor information
 ├── LICENSE                    # MIT license
 ├── requirements.txt           # Python dependencies
 ├── .gitignore                 # Git ignore patterns
 ├── .zenodo.json               # Zenodo metadata
+├── ZENODO_UPLOAD_GUIDE.md     # Guide for uploading to Zenodo
+│
+├── .claude/                   # Claude-specific configurations
+│   └── settings.local.json    # Local Claude settings
 │
 ├── NeededData/                # Input data and generated outputs
+│   ├── DATA_DICTIONARY.md     # Parameter definitions and units
 │   ├── Experimental_Data/     # Experimental fluorescence/absorption
-│   │   ├── archive/           # Older versions (for reference)
-│   │   ├── csv/               # CSV format data files
-│   │   └── README.md          # Data specifications
 │   ├── hamiltonian/           # Hamiltonian and spectral outputs
-│   │   ├── Hamiltonian/       # Detailed matrices
-│   │   ├── SiteEnergy_Data/   # Per-pigment energies
-│   │   ├── Spectra_Data/      # Raw spectral calculations
-│   │   └── README.md          # Format documentation
 │   ├── mcce/                  # MCCE electrostatics output
-│   │   └── README.md          # pKa and protonation data
-│   ├── structure/             # Protein PDB files
-│   │   └── README.md          # Structure descriptions
-│   └── DATA_DICTIONARY.md     # Parameter definitions and units
+│   └── structure/             # Protein PDB files
 │
-├── scripts/                   # Executable analysis scripts
-│   ├── hamiltonian/           # Hamiltonian calculation
-│   │   ├── cdc_IsiA_monomer_average_pH7.py
-│   │   └── README.md
-│   └── fluorescence_decay/    # Fluorescence decay simulations
-│       ├── model_1/ to model_123/  # 8 different model variants
-│       │   ├── run_model_X.py
-│       │   ├── unified_parameters.py
-│       │   ├── Fluoresence_analysis.py
-│       │   ├── find_best_parameter_model/  # Model comparison scripts
-│       │   ├── Simulation/   # Output directory
-│       │   └── README.md
-│       ├── NPZ_FORMAT.md      # File format documentation
-│       └── README.md
+├── pymembrane/                # Local pymembrane library
+│   └── README.md              # pymembrane documentation
 │
-└── pymembrane/                # Local pymembrane library
-    ├── setup.py
-    └── README.md
+└── scripts/                   # Executable analysis scripts
 ```
 
 ### Key Directories and Files
 
+- **`.claude/`**: Claude-specific configurations
+  - `settings.local.json`: Local Claude settings
+
 - **`NeededData/`**: All input data and calculated outputs
+  - `DATA_DICTIONARY.md`: Complete parameter definitions and units
   - `Experimental_Data/`: Reference spectroscopy measurements
   - `hamiltonian/`: Pre-calculated Hamiltonian matrices and spectra
-  - `mcce/`: Electrostatic and protonation state data
+  - `mcce/`: MCCE electrostatics output and pKa values
   - `structure/`: Protein atomic coordinates (PDB format)
-  - `DATA_DICTIONARY.md`: Complete parameter definitions
 
-- **`scripts/`**: Reproducible analysis workflows
-  - `hamiltonian/`: Calculate excitonic Hamiltonian from structure
-  - `fluorescence_decay/`: Simulate time-resolved fluorescence
-  - 8 different models with parameter optimization
-  - SLURM scripts for cluster execution
+- **`pymembrane/`**: Local pymembrane library
+  - `README.md`: Documentation for the pymembrane library
+
+- **`scripts/`**: Executable analysis scripts
+  - Contains workflow scripts for analysis
 
 - **Documentation files:**
-  - `QUICKSTART.md`: 5-minute setup
-  - `CITATION.cff`: Proper citation format
+  - `README.md`: Main project documentation (this file)
+  - `QUICKSTART.md`: setup guide
+  - `ZENODO_UPLOAD_GUIDE.md`: Guide for uploading to Zenodo
   - `CHANGELOG.md`: Version history
   - `AUTHORS.md`: Contributor roles
+  - `.zenodo.json`: Zenodo metadata
 
 ---
 

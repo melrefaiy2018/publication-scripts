@@ -7,26 +7,31 @@
   "creators": [
     {
       "name": "Elrefaiy, Mohamed A. A.",
-      "affiliation": "Massachusetts Institute of Technology"
+      "affiliation": "Department of Chemistry, The University of Texas at Austin"
     },
     {
-      "name": "Harris, Dvir"
+      "name": "Harris, Dvir",
+      "affiliation": "Department of Chemistry, Massachusetts Institute of Technology"
     },
     {
-      "name": "Toporik, Hila"
+      "name": "Toporik, Hila",
+      "affiliation": "Biodesign Institute, School of Molecular Sciences, Arizona State University"
     },
     {
-      "name": "Gisriel, Christopher J."
+      "name": "Gisriel, Christopher J.",
+      "affiliation": "Department of Biochemistry, University of Wisconsin-Madison"
     },
     {
-      "name": "Mazor, Yuval"
+      "name": "Mazor, Yuval",
+      "affiliation": "School of Molecular Sciences, Arizona State University"
     },
     {
-      "name": "Raccah, Doran I. G. B."
+      "name": "Raccah, Doran I. G. B.",
+      "affiliation": "Department of Chemistry, The University of Texas at Austin"
     },
     {
       "name": "Schlau-Cohen, Gabriela S.",
-      "affiliation": "Massachusetts Institute of Technology"
+      "affiliation": "Department of Chemistry, Massachusetts Institute of Technology"
     }
   ],
   "keywords": [
@@ -44,11 +49,11 @@
   ],
   "related_identifiers": [
     {
-      "identifier": "10.5281/zenodo.XXXXXX",
+      "identifier": "10.5281/zenodo.18380490",
       "relation": "isSupplementTo",
       "scheme": "doi",
       "resource_type": "publication-article"
     }
   ],
-  "notes": "This dataset accompanies a manuscript currently in preparation. The DOI for the published manuscript will be updated once available. All code was developed and tested on Python 3.8+. Computational requirements vary by model, with typical simulations requiring 4-16 CPU cores and 8-32 GB RAM."
+  "notes": "This dataset accompanies a manuscript currently in preparation. The DOI for the published manuscript will be updated once available. All code was developed and tested on Python 3.10"
 }
