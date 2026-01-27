@@ -35,12 +35,6 @@ PARAMETER_SETS = {
         "TIME_to_RP1": [0.2, 0.4, 0.6, 0.8, 1, 2, 3],
         "COUPLING_value": [20, 50, 100, 150, 200, 250, 300]
     },
-    # Configuration 12: CT/RP1 model (used in run_model_12.py)
-    # "model_12" : {
-    # "TIME_FL": [16],
-    # "TIME_ISC": [3, 5],
-    # "COUPLING_value": [20, 50, 100, 150, 200, 250, 300]
-    # },
     "model_12" : {
     "TIME_FL": [16],
     "TIME_ISC": [1, 2, 2.5, 2.7, 2.8, 3, 4, 5],

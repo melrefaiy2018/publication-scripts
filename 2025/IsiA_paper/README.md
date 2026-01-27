@@ -79,7 +79,7 @@ IsiA_data_and_code/
 
 This step calculates the excitonic Hamiltonian, site energies, and spectra for the IsiA monomer.
 
-1.  Navigate to the `hamiltonian` script directory:
+1.  Navigate to the `scripts/hamiltonian` script directory:
     ```bash
     cd scripts/hamiltonian
     ```
@@ -160,7 +160,7 @@ If you use this code or data in your research, please cite the following manuscr
 
 **Quenching of the Photosynthetic Antenna IsiA is Facilitated by its Red-Emitting States**
 
-Mohamed A. A. Elrefaiy, Dvir Harris, Hila Toporik, Christopher J. Gisriel, Yuval Mazor, Doran I. G. B. Raccah, Gabriela S. Schlau-Cohen
+Dvir Harris, Mohamed A. A. Elrefaiy, Hila Toporik, Christopher J. Gisriel, Yuval Mazor, Doran I. G. B. Raccah, Gabriela S. Schlau-Cohen
 
 *Manuscript in preparation. 2025.*
 
@@ -169,7 +169,7 @@ Mohamed A. A. Elrefaiy, Dvir Harris, Hila Toporik, Christopher J. Gisriel, Yuval
 This repository is also citable. You can cite it using the DOI provided by Zenodo:
 
 ```
-Elrefaiy, M. A. A., Harris, D., Toporik, H., Gisriel, C. J., Mazor, Y., Raccah, D. I. G. B., & Schlau-Cohen, G. (2025). 
+Harris, D., Elrefaiy, M. A. A., Toporik, H., Gisriel, C. J., Mazor, Y., Raccah, D. I. G. B., & Schlau-Cohen, G. (2025). 
 IsiA protein spectroscopy analysis: Code and data [Computer software]. GitHub. 
 https://github.com/melrefaiy2018/Papers
 ```
