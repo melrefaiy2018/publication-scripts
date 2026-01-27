@@ -1,0 +1,28 @@
+Metadata-Version: 2.4
+Name: pymembrane
+Version: 0.0.0
+Author-email: Andrea Tagliabue <andrea.tagliabue@edu.unige.it>, Mohamed El Refaiy <moelrefaiy@gmail.com>, Bailey Raber <baysmoot12@gmail.com>, Kajwal Petra <kajwal.patra@austin.utexas.edu>, "Doran I. G. B. Raccah" <doran.raccah@utexas.edu>
+Maintainer-email: "Doran I. G. B. Raccah" <doran.raccah@utexas.edu>
+License-Expression: MIT
+Project-URL: Repository, https://github.com/MesoscienceLab/pymembrane
+Keywords: thylakoid,membrane,spectroscopy,mesoscale,photosynthesis
+Classifier: Programming Language :: Python
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: biopython==1.86
+Requires-Dist: equinox==0.13.2
+Requires-Dist: interpolation==2.2.7
+Requires-Dist: jax==0.8.1
+Requires-Dist: jaxtyping==0.3.3
+Requires-Dist: matplotlib==3.10.7
+Requires-Dist: numba==0.62.1
+Requires-Dist: numpy==2.3.5
+Requires-Dist: pydantic==2.12.5
+Requires-Dist: safetensors==0.7.0
+Requires-Dist: scipy==1.16.3
+Requires-Dist: shapely==2.1.2
+Requires-Dist: typer==0.21.1
+Dynamic: license-file
+
+# pymembrane
