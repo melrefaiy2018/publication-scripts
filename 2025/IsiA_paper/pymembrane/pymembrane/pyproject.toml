@@ -1,0 +1,38 @@
+[project]
+name = "pymembrane"
+version = "0.0.0"
+dependencies = [
+  "biopython",
+  "numba<=0.57",
+  "numpy<1.24.0",
+  "scipy",
+  "matplotlib",
+  "interpolation",
+  "shapely"
+]
+requires-python = ">=3.10"
+authors = [
+    {name = "Mohamed Elrefaiy", email = "moelrefaiy@gmail.com"},
+    {name = "Andrea Tagliabue", email = "andrea.tagliabue@edu.unige.it"},
+    {name = "Bailey Raber", email = "baysmoot12@gmail.com"},
+    {name = "Kajwal Petra", email = "kajwal.patra@austin.utexas.edu"},
+    {name = "Doran I. G. B. Raccah", email = "doran.raccah@utexas.edu"},
+]
+maintainers = [
+  {name = "Doran I. G. B. Raccah", email = "doran.raccah@utexas.edu"}
+]
+#description = "Python Distribution of "
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["thylakoid", "membrane", "spectroscopy", "mesoscale", "photosynthesis"]
+classifiers = [
+  "Programming Language :: Python"
+]
+
+[project.urls]
+Repository = "https://github.com/MesoscienceLab/pymembrane"
+
+[tool.pytest.ini_options]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+]
