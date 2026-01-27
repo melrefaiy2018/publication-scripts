@@ -113,15 +113,6 @@ Once you've verified the basic installation works:
 ### FileNotFoundError: Cannot find experimental data
 **Solution:** Verify you're running scripts from the correct directory (see paths above)
 
-### MemoryError during simulation
-**Solution:** Reduce ensemble size (`N_ens`) in `unified_parameters.py`
-
-### Slow performance
-**Solution:**
-- Use fewer time points or wavelengths
-- Run on a system with more CPU cores
-- Consider using the SLURM parallel scripts for cluster execution
-
 ## Getting Help
 
 - **Full documentation:** [README.md](README.md)
@@ -129,21 +120,6 @@ Once you've verified the basic installation works:
 - **File formats:** [scripts/fluorescence_decay/NPZ_FORMAT.md](scripts/fluorescence_decay/NPZ_FORMAT.md)
 - **Issues:** Open an issue on GitHub
 - **Citation:** See [CITATION.cff](CITATION.cff)
-
-## System Requirements
-
-**Minimum:**
-- Python 3.8+
-- 4 GB RAM
-- 2 CPU cores
-- 2 GB disk space
-
-**Recommended:**
-- Python 3.9+
-- 16 GB RAM
-- 8+ CPU cores
-- 4 GB disk space
-- Linux or macOS (Windows also supported)
 
 ## Quick Validation
 

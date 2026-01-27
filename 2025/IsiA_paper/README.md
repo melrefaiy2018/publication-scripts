@@ -10,9 +10,9 @@ This repository contains computational data and analysis code accompanying the m
 
 > **Quenching of the Photosynthetic Antenna IsiA is Facilitated by its Red-Emitting States**
 >
-> Mohamed A. A. Elrefaiy, Dvir Harris, Hila Toporik, Christopher J. Gisriel, Yuval Mazor, Doran I. G. B. Raccah, Gabriela S. Schlau-Cohen
+> Dvir Harris, Mohamed A. A. Elrefaiy, Hila Toporik, Christopher J. Gisriel, Yuval Mazor, Doran I. G. B. Raccah, Gabriela S. Schlau-Cohen
 >
-> *Manuscript in preparation, 2025*
+> *Submitted, 2026*
 
 This work presents a comprehensive computational analysis of the IsiA protein complex, including:
 - Excitonic Hamiltonian calculations from cryo-EM structures
@@ -45,29 +45,6 @@ pip install -e pymembrane
 cd scripts/hamiltonian
 python cdc_IsiA_monomer_average_pH7.py
 ```
-
----
-
-## System Requirements
-
-### Minimum Requirements
-- **OS:** Linux, macOS, or Windows (WSL2 recommended)
-- **Python:** 3.8 or higher
-- **RAM:** 8 GB (16 GB recommended)
-- **Disk space:** 2-4 GB free
-- **Processor:** 2+ CPU cores (4+ cores recommended for parallel simulations)
-
-### Recommended Configuration
-- **Python:** 3.9 or 3.10
-- **RAM:** 16+ GB (for ensemble simulations with 10,000+ trajectories)
-- **Disk space:** 4+ GB (for storing simulation outputs)
-- **Processor:** 8+ CPU cores (for SLURM cluster execution)
-- **Compiler:** GCC/Clang (for building C extensions)
-
-### Tested Environments
-- Ubuntu 20.04 LTS, Python 3.8, numpy 1.20
-- macOS 12.x, Python 3.9, numpy 1.21
-- Windows 11 WSL2 (Ubuntu 20.04), Python 3.10, numpy 1.23
 
 ---
 
@@ -398,21 +375,6 @@ Model Rankings (by RMSE):
 - **Check:** Are you running from the repository root?
 - **Solution:** `cd` to repository root and use absolute paths if needed
 
-**Problem:** Memory error during simulation
-- **Cause:** Too many ensemble members or high time/wavelength resolution
-- **Solution:** Reduce `N_ens` in `unified_parameters.py`, or increase system RAM
-
-**Problem:** SLURM job fails with module not found
-- **Solution:** Load Python module on cluster: `module load python/3.9`
-- Ensure pymembrane is installed in correct environment
-
-**Problem:** Slow simulation (>10 min for small ensemble)
-- **Cause:** Inefficient parameter choices or system load
-- **Solution:** Reduce output frequency or wavelength resolution
-
-**Problem:** Matplotlib cannot display figures
-- **Solution:** Use non-interactive backend: `matplotlib.use('Agg')`
-
 For more help, see [QUICKSTART.md#common-issues](QUICKSTART.md#common-issues).
 
 ---
@@ -503,7 +465,7 @@ Note: Major changes to analysis code may not be accepted as they could affect re
 
 **Principal Investigator:** Gabriela S. Schlau-Cohen (MIT Chemistry)
 
-**Lead Developer:** Mohamed A. A. Elrefaiy (MIT Chemistry)
+**Lead Developer:** Mohamed A. A. Elrefaiy
 
 **Questions?** Open an issue on GitHub or contact the authors.
 
