@@ -22,7 +22,7 @@ This work presents a comprehensive computational analysis of the IsiA protein co
 
 ---
 
-## Quick Start (5 minutes)
+## Quick Start
 
 **Want to get running immediately?** See [QUICKSTART.md](QUICKSTART.md) for a fast setup guide with example commands.
 
@@ -138,7 +138,7 @@ python3 -m venv env
 source env/bin/activate  # On Windows: env\Scripts\activate
 
 # Or using conda
-conda create -n isia python=3.9
+conda create -n isia python=3.10
 conda activate isia
 ```
 
@@ -177,33 +177,6 @@ See [QUICKSTART.md](QUICKSTART.md#common-issues) for more troubleshooting.
 
 ---
 
-## Computational Requirements
-
-### Hamiltonian Calculation
-- **Execution time:** 30 seconds - 2 minutes
-- **Memory:** ~500 MB
-- **Output size:** ~25 KB (matrices) + ~20 KB (spectra)
-- **Parallelization:** Single-threaded (no speedup from multi-core)
-
-### Fluorescence Decay Simulations (per model)
-- **Execution time:** 2-30 minutes (varies by ensemble size and parameters)
-- **Memory:** 2-8 GB (for default 1000-10000 trajectory ensemble)
-- **Output size:** 10-500 MB per model (depends on time/wavelength resolution)
-- **Parallelization:** Fully parallelizable (SLURM scripts provided)
-- **SLURM job request:** Typical 4-16 cores, 30 minutes - 2 hours
-
-### Model Comparison
-- **Execution time:** 5-10 minutes per model
-- **Memory:** ~1 GB
-- **Output:** Goodness-of-fit metrics and comparison plots
-
-### Full Workflow (All 8 Models)
-- **Total execution time:** 3-4 hours (single CPU) or 30-60 minutes (8-core parallel)
-- **Total disk space:** ~1-2 GB for all outputs
-- **Recommended:** Run on HPC cluster or powerful workstation
-
----
-
 ## How to Reproduce the Results
 
 ### 1. Calculate the Excitonic Hamiltonian
@@ -233,10 +206,6 @@ NeededData/hamiltonian/
 └── Spectra_Data/                   # Spectral components
 ```
 
-**Expected results:**
-- Absorption peak at ~680 nm
-- Hamiltonian values: diagonal 14500-15500 cm⁻¹, couplings ±100 cm⁻¹
-
 ### 2. Simulate Fluorescence Decay
 
 Simulate time-resolved fluorescence using multiple kinetic models:
@@ -254,9 +223,6 @@ done
 ```
 
 **Parameters to customize** (edit `unified_parameters.py`):
-- `N_ens`: Number of trajectories (100-10000)
-- `t_max`: Simulation time (5-20 ns)
-- `dt`: Time step (0.001-0.01 ns)
 - Model-specific parameters (see comments in each `unified_parameters.py`)
 
 **For SLURM clusters:**
@@ -307,8 +273,6 @@ find_best_parameter_model/outputs/
 - **Primary file:** `NeededData/Experimental_Data/Fl_IsiA_monomer_300K_Gabriela_2025.npy`
 - **Format:** NumPy binary (1D or 2D array)
 - **Temperature:** 300 K (room temperature)
-- **Time range:** 0-10 ns
-- **Wavelength range:** 600-750 nm
 
 See [NeededData/Experimental_Data/README.md](NeededData/Experimental_Data/README.md) for full specifications.
 
@@ -387,13 +351,13 @@ If you use this code or data, please cite:
 
 ```bibtex
 @article{elrefaiy2025isia,
-  author = {Elrefaiy, Mohamed A. A. and Harris, Dvir and Toporik, Hila and
+  author = {Harris, Dvir and Elrefaiy, Mohamed A. A. and  and Toporik, Hila and
             Gisriel, Christopher J. and Mazor, Yuval and Raccah, Doran I. G. B. and
             Schlau-Cohen, Gabriela S.},
   title = {Quenching of the Photosynthetic Antenna {IsiA} is Facilitated by its Red-Emitting States},
   journal = {[Journal Name]},
-  year = {2025},
-  note = {In preparation}
+  year = {2026},
+  note = {Submitted}
 }
 ```
 
@@ -403,27 +367,11 @@ If you use this code or data, please cite:
 @software{elrefaiy2025isia_zenodo,
   author = {Elrefaiy, Mohamed A. A. and others},
   title = {IsiA Protein Spectroscopy Analysis: Code and Data},
-  year = {2025},
+  year = {2026},
   url = {https://github.com/melrefaiy2018/IsiA_paper},
-  doi = {10.5281/zenodo.XXXXXX}
+  doi = {10.5281/zenodo.18380490}
 }
 ```
-
-Or use the [CITATION.cff](CITATION.cff) file for automatic citation formatting.
-
----
-
-## Funding and Acknowledgments
-
-This research was supported by:
-- [Funding agency 1] - Grant [number]
-- [Funding agency 2] - Grant [number]
-- MIT Department of Chemistry
-
-We thank:
-- Gabriela S. Schlau-Cohen lab members for experimental guidance
-- MIT Center for Excitonics for computational resources
-- The open-source scientific Python community
 
 ---
 
@@ -465,14 +413,10 @@ Note: Major changes to analysis code may not be accepted as they could affect re
 
 **Principal Investigator:** Gabriela S. Schlau-Cohen (MIT Chemistry)
 
-**Lead Developer:** Mohamed A. A. Elrefaiy
-
-**Questions?** Open an issue on GitHub or contact the authors.
+**Questions?** Open an issue on GitHub or contact Mohamed Elrefaiy.
 
 ---
 
 *Last updated: January 26, 2025*
 
 *Repository version: 1.0.0*
-
-*Status: Preparing for Zenodo release*
